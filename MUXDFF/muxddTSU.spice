@@ -1,0 +1,44 @@
+* Inverter Testbench
+
+* Include the sky130 model library
+.lib "/foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice" tt
+
+* Include the extracted netlist for the inverter
+.include "/foss/designs/UTS/muxdd.spice"
+
+* Supply voltage sources
+Vpwr Vpwr 0 DC 1.8
+Vgnd Vgnd 0 DC 0
+
+* Input pulse sources
+VINS S 0 PULSE(0 1.8 0 10p 10p 10n 20n)
+VINB B 0 PULSE(0 1.8 0 10p 10p 20n 40n)
+VINA A 0 PULSE(0 1.8 0 10p 10p 40n 80n)
+VCLK CLK 0 PULSE(0 1.8 0 10p 10p 5n 10n)
+
+* DUT instantiation (assumes muxdd has proper pin ordering)
+Xmuxdd Vpwr Vgnd S B A D QNOT Q CLK muxdd
+
+* Transient analysis
+.tran 0.1n 80.5n 79.5n
+
+* --- Timing Measurements ---
+* 1. Clock-to-Q delay (t_clkq)
+.meas tran t_clkq trig V(CLK) val=0.9 rise=1 targ V(Q) val=0.9 rise=1
+
+* 2. Setup time (t_setup)
+.meas tran t_setup trig V(D) val=1.62 rise=1 targ V(CLK) val=0.9 rise=1
+
+* 3. Hold time (t_hold)
+.meas tran t_hold trig V(CLK) val=0.9 rise=1 targ V(D) val=0.18 fall=1
+
+* 4. MUX propagation delay (sel to D)
+.meas tran t_mux_delay trig V(S) val=0.9 rise=1 targ V(D) val=0.9 rise=1
+
+.control
+* Plot waveforms
+run
+plot V(CLK) V(A)+2 V(B)+4 V(S)+6 V(D)+8 V(Q)+10 V(QNOT)+12
+.endc
+.end
+

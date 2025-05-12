@@ -1,0 +1,48 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1745052271
+<< metal1 >>
+rect 1420 1720 5601 1780
+rect 1600 990 2170 1070
+rect 1760 840 1850 920
+rect 2090 840 2170 990
+rect 2250 840 2320 1070
+rect 3710 990 3870 1070
+rect 5220 990 5310 1070
+rect 3210 920 3280 930
+rect 2590 840 2680 920
+rect 3210 840 3500 920
+rect 5040 840 5310 920
+rect 1430 330 5600 390
+<< metal2 >>
+rect 4910 1080 5590 1160
+rect 5510 840 5590 1080
+use dff  dff_0
+timestamp 1745049344
+transform 1 0 3909 0 1 770
+box -639 -440 1716 1031
+use mux  mux_0
+timestamp 1745050697
+transform 1 0 1479 0 1 330
+box -19 0 1836 1471
+<< labels >>
+flabel metal1 1420 1720 5601 1780 1 FreeSans 400 0 0 0 Vpwr
+port 1 n
+flabel metal1 1430 330 5600 390 1 FreeSans 400 0 0 0 Vgnd
+port 2 n
+flabel metal1 1600 990 2170 1070 1 FreeSans 400 0 0 0 S
+port 3 n
+flabel metal1 1760 840 1850 920 1 FreeSans 400 0 0 0 B
+port 4 n
+flabel metal1 2590 840 2680 920 1 FreeSans 400 0 0 0 A
+port 5 n
+flabel metal1 3210 840 3280 930 1 FreeSans 400 0 0 0 D
+port 6 n
+flabel metal2 5510 840 5590 1160 1 FreeSans 400 0 0 0 QNOT
+port 7 n
+flabel metal1 5220 990 5310 1070 1 FreeSans 400 0 0 0 Q
+port 8 n
+flabel metal1 3710 990 3870 1070 1 FreeSans 400 0 0 0 CLK
+port 9 n
+<< end >>

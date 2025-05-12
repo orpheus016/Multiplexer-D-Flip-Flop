@@ -1,0 +1,32 @@
+* Inverter Testbench
+
+* Include the sky130 model library
+.lib "/foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice" tt
+
+* Include the extracted netlist for the inverter
+.include "/foss/designs/UTS/muxdd.spice"
+
+* Sumber Tegangan (Voltage Sources)
+Vpwr Vpwr 0 DC 1.8
+Vgnd Vgnd 0 DC 0
+
+* Input Pulse Source
+VINS S 0 PULSE(0 1.8 0 10p 10p 10n 20n)
+VINB B 0 PULSE(0 1.8 0 10p 10p 20n 40n)
+VINA A 0 PULSE(0 1.8 0 10p 10p 40n 80n)
+VCLK CLK 0 PULSE(0 1.8 0 10p 10p 5n 10n)
+
+* Inverter Instantiation
+Xmuxdd Vpwr Vgnd S B A D QNOT Q CLK muxdd
+
+* Perintah Simulasi Transien
+.tran 0.1n 100n
+
+* Perintah untuk Output
+.control
+  run
+  plot v(CLK)+12 v(A)+10 v(B)+8 v(S)+6 v(D)+4 v(Q)+2 v(QNOT) 
+.endc
+
+.end
+

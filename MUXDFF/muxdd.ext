@@ -1,0 +1,188 @@
+timestamp 1745052271
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use mux mux_0 1 0 1479 0 1 330
+use dff dff_0 1 0 3909 0 1 770
+port "QNOT" 7 5510 840 5590 1160 m2
+port "Vgnd" 2 1430 330 5600 390 m1
+port "A" 5 2590 840 2680 920 m1
+port "D" 6 3210 840 3280 930 m1
+port "Q" 8 5220 990 5310 1070 m1
+port "CLK" 9 3710 990 3870 1070 m1
+port "B" 4 1760 840 1850 920 m1
+port "S" 3 1600 990 2170 1070 m1
+port "Vpwr" 1 1420 1720 5601 1780 m1
+node "QNOT" 1 391.92 5510 840 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 73600 2000 0 0 0 0 0 0 0 0
+node "Vgnd" 9 1654.4 1430 330 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 250200 8460 0 0 0 0 0 0 0 0 0 0
+node "m1_5040_840#" 0 101.884 5040 840 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 21600 700 0 0 0 0 0 0 0 0 0 0
+node "A" 0 43.6194 2590 840 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7200 340 0 0 0 0 0 0 0 0 0 0
+node "D" 0 116.364 3210 840 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 23900 760 0 0 0 0 0 0 0 0 0 0
+node "Q" 0 48.2832 5220 990 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7200 340 0 0 0 0 0 0 0 0 0 0
+node "CLK" 0 76.9382 3710 990 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12800 480 0 0 0 0 0 0 0 0 0 0
+node "m1_2250_840#" 0 66.8877 2250 840 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 16100 600 0 0 0 0 0 0 0 0 0 0
+node "B" 0 38.6551 1760 840 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7200 340 0 0 0 0 0 0 0 0 0 0
+node "S" 1 217.779 1600 990 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 57600 1600 0 0 0 0 0 0 0 0 0 0
+node "Vpwr" 9 1688.02 1420 1720 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 250860 8482 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "m1_2250_840#" "CLK" 2.44444
+cap "Vpwr" "Q" 5.65714
+cap "Vpwr" "D" 15.0549
+cap "Vgnd" "D" 25.52
+cap "Q" "CLK" 2.51429
+cap "A" "D" 6.06897
+cap "Vpwr" "m1_5040_840#" 9.31765
+cap "Vgnd" "m1_5040_840#" 23.76
+cap "Vpwr" "Vgnd" 86.7246
+cap "m1_2250_840#" "S" 77.8462
+cap "Vpwr" "A" 4.65882
+cap "S" "B" 45.1379
+cap "A" "Vgnd" 7.92
+cap "QNOT" "Q" 27.5781
+cap "Vpwr" "CLK" 10.0571
+cap "CLK" "Vgnd" 10.8308
+cap "QNOT" "m1_5040_840#" 16.1109
+cap "m1_2250_840#" "D" 0.468085
+cap "Vpwr" "QNOT" 3.94297
+cap "QNOT" "Vgnd" 2.81811
+cap "Vpwr" "S" 35.8286
+cap "S" "Vgnd" 34.1169
+cap "Q" "m1_5040_840#" 33
+cap "Vpwr" "m1_2250_840#" 4.4
+cap "m1_2250_840#" "Vgnd" 6.16
+cap "B" "Vgnd" 7.92
+cap "m1_2250_840#" "A" 11
+cap "m1_5040_840#" "D" 2.21384
+cap "mux_0/nand_1/a_30_n300#" "mux_0/nand_1/A" -1.11022e-15
+cap "mux_0/Vgnd" "mux_0/nand_2/A" -0.135658
+cap "mux_0/nand_2/A" "mux_0/nand_1/A" 2.72743
+cap "mux_0/Vpwr" "mux_0/nand_1/a_30_n300#" -0.057534
+cap "mux_0/nand_2/A" "mux_0/Vpwr" -0.0129379
+cap "mux_0/Vgnd" "mux_0/S" -33.453
+cap "mux_0/Vgnd" "mux_0/A" -7.04
+cap "mux_0/S" "mux_0/nand_1/A" -43.1595
+cap "mux_0/A" "mux_0/nand_1/A" -10.0126
+cap "mux_0/Vpwr" "mux_0/A" -4.04476
+cap "mux_0/S" "mux_0/Vpwr" -30.6173
+cap "mux_0/nand_0/a_30_n300#" "mux_0/B" 2.19932
+cap "mux_0/nand_2/B" "mux_0/B" 0.917962
+cap "dff_0/CLK" "mux_0/nand_1/A" -1.22222
+cap "mux_0/Vgnd" "mux_0/nand_0/a_30_n300#" -2.84217e-14
+cap "mux_0/Vgnd" "mux_0/nand_2/B" 5.68434e-14
+cap "mux_0/nand_1/a_30_n300#" "mux_0/A" 2.19932
+cap "mux_0/Vgnd" "mux_0/B" -7.04
+cap "mux_0/nand_2/A" "mux_0/A" 2.20477
+cap "mux_0/D" "mux_0/nand_1/A" -0.234043
+cap "mux_0/nand_2/B" "mux_0/nand_1/A" 2.91556
+cap "mux_0/Vpwr" "mux_0/nand_2/B" -0.0113609
+cap "mux_0/Vgnd" "mux_0/nand_1/A" -6.13969
+cap "mux_0/Vgnd" "mux_0/Vpwr" -20.3509
+cap "mux_0/Vpwr" "mux_0/nand_1/A" -3.20911
+cap "mux_0/nand_0/a_30_n300#" "mux_0/S" -0.546014
+cap "mux_0/S" "mux_0/nand_2/B" 7.04143
+cap "mux_0/S" "mux_0/B" -40.0634
+cap "mux_0/D" "mux_0/A" -3.03448
+cap "mux_0/nand_2/B" "mux_0/A" 2.44882
+cap "mux_0/Vgnd" "mux_0/nand_1/a_30_n300#" -2.84217e-14
+cap "mux_0/nand_2/B" "dff_0/nand_1/a_30_n300#" 0.0169903
+cap "mux_0/S" "mux_0/D" 0.135483
+cap "mux_0/Vgnd" "mux_0/D" 95.9429
+cap "dff_0/CLK" "dff_0/nand_2/A" 1.17136
+cap "dff_0/nand_2/A" "mux_0/nand_1/A" 0.185713
+cap "dff_0/nand_1/B" "mux_0/nand_2/a_30_n300#" 0.0762002
+cap "dff_0/CLK" "mux_0/nand_1/A" -0.983861
+cap "dff_0/nand_2/A" "mux_0/D" 0.960342
+cap "dff_0/CLK" "mux_0/D" 12.7848
+cap "mux_0/D" "mux_0/nand_1/A" -0.0285786
+cap "mux_0/Vgnd" "mux_0/nand_2/a_30_n300#" 0.542938
+cap "dff_0/Q" "dff_0/CLK" -1.25714
+cap "dff_0/Q" "mux_0/D" -1.10692
+cap "mux_0/nand_2/B" "dff_0/nand_0/a_30_n300#" 0.0708817
+cap "mux_0/nand_2/A" "mux_0/B" -0.0568074
+cap "dff_0/nand_3/B" "mux_0/nand_2/B" 1.46361
+cap "dff_0/nand_1/B" "mux_0/nand_1/a_30_n300#" 0.0215521
+cap "mux_0/nand_2/A" "mux_0/nand_2/B" -0.0460998
+cap "mux_0/nand_2/A" "dff_0/nand_3/B" 0.0158972
+cap "dff_0/nand_1/B" "mux_0/nand_2/B" 12.6515
+cap "mux_0/nand_2/B" "mux_0/Vpwr" 3.40137
+cap "dff_0/nand_1/B" "mux_0/nand_2/A" 0.328799
+cap "mux_0/B" "mux_0/D" 0.0157155
+cap "mux_0/Vgnd" "mux_0/nand_2/B" 8.09538
+cap "mux_0/nand_2/B" "dff_0/nand_2/A" 0.333898
+cap "dff_0/CLK" "mux_0/nand_2/B" 0.493212
+cap "mux_0/nand_2/A" "mux_0/A" 0.00624454
+cap "dff_0/nand_1/B" "mux_0/A" 0.0112267
+cap "dff_0/nand_1/B" "mux_0/Vpwr" -5.78492
+cap "mux_0/nand_2/B" "mux_0/nand_1/A" 1.11022e-16
+cap "mux_0/nand_2/A" "mux_0/Vgnd" 0.23834
+cap "mux_0/nand_2/B" "mux_0/D" 21.1154
+cap "mux_0/nand_2/A" "mux_0/S" -0.163832
+cap "dff_0/nand_3/B" "mux_0/D" 0.00391437
+cap "dff_0/nand_1/B" "mux_0/S" 0.00498896
+cap "mux_0/nand_2/A" "dff_0/nand_2/A" 0.96454
+cap "mux_0/nand_2/A" "dff_0/CLK" 5.4111
+cap "dff_0/nand_1/B" "mux_0/Vgnd" 0.105524
+cap "dff_0/nand_1/B" "dff_0/CLK" 19.1744
+cap "mux_0/nand_2/A" "mux_0/D" 3.74274
+cap "mux_0/nand_2/A" "mux_0/nand_1/A" 2.26484
+cap "mux_0/Vgnd" "mux_0/Vpwr" -38.293
+cap "dff_0/nand_1/B" "mux_0/nand_1/A" 0.0182585
+cap "dff_0/nand_1/B" "mux_0/D" 18.5559
+cap "dff_0/nand_2/A" "mux_0/A" 0.136896
+cap "dff_0/CLK" "mux_0/A" 0.143828
+cap "dff_0/nand_2/A" "mux_0/Vpwr" 1.87405
+cap "dff_0/CLK" "mux_0/Vpwr" 16.3191
+cap "mux_0/A" "mux_0/D" -2.8488
+cap "mux_0/Vpwr" "mux_0/D" 8.90301
+cap "dff_0/CLK" "mux_0/S" 0.0243098
+cap "dff_0/CLK" "mux_0/Vgnd" -9.56201
+cap "dff_0/nand_3/B" "dff_0/QNOT" 4.82977
+cap "dff_0/Q" "dff_0/nand_2/A" 0.174063
+cap "mux_0/nand_2/Vpwr" "dff_0/QNOT" -2.47625
+cap "dff_0/Q" "dff_0/CLK" -1.25714
+cap "dff_0/Q" "dff_0/QNOT" -39.667
+cap "mux_0/nand_2/Vgnd" "dff_0/QNOT" -2.66628
+cap "dff_0/nand_3/B" "dff_0/nand_1/B" -2.84217e-14
+cap "dff_0/nand_3/B" "mux_0/nand_2/B" 1.38214
+cap "dff_0/nand_3/B" "mux_0/nand_2/Vpwr" 0.00250807
+cap "dff_0/Q" "mux_0/nand_2/Vpwr" -13.5902
+cap "mux_0/nand_2/Vgnd" "mux_0/nand_2/Vpwr" -35.3913
+cap "dff_0/nand_3/B" "dff_0/Q" 0.760686
+cap "mux_0/D" "dff_0/CLK" 1.77636e-15
+cap "mux_0/nand_2/Vgnd" "dff_0/Q" -23.5982
+cap "dff_0/nand_3/B" "mux_0/nand_2/A" 0.0125837
+cap "dff_0/nand_3/B" "dff_0/nand_0/a_30_n300#" -1.38778e-17
+cap "dff_0/nand_3/B" "mux_0/D" 0.178823
+cap "dff_0/CLK" "dff_0/nand_2/A" -2.84217e-14
+cap "mux_0/D" "dff_0/Q" -1.10692
+cap "dff_0/CLK" "dff_0/QNOT" 0.00816096
+cap "mux_0/Vpwr" "mux_0/S" 0.130946
+cap "mux_0/D" "mux_0/Vpwr" 0.786047
+cap "mux_0/Vpwr" "mux_0/nand_2/B" 1.78069
+cap "mux_0/D" "mux_0/nand_2/B" 0.941176
+cap "mux_0/nand_2/Vpwr" "dff_0/nand_3/B" 0.00708175
+merge "dff_0/VSUBS" "mux_0/VSUBS" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "mux_0/VSUBS" "VSUBS"
+merge "mux_0/nand_2/Vgnd" "dff_0/Vgnd" -1741.55 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -247200 -8480 0 0 0 0 0 0 0 0 0 0
+merge "dff_0/Vgnd" "dff_0/nand_1/Vgnd"
+merge "dff_0/nand_1/Vgnd" "mux_0/Vgnd"
+merge "mux_0/Vgnd" "Vgnd"
+merge "mux_0/nand_2/Vpwr" "dff_0/Vpwr" -1925.87 0 0 0 0 0 -1360 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -247200 -8480 0 0 0 0 0 0 0 0 0 0
+merge "dff_0/Vpwr" "dff_0/nand_1/Vpwr"
+merge "dff_0/nand_1/Vpwr" "mux_0/Vpwr"
+merge "mux_0/Vpwr" "Vpwr"
+merge "dff_0/QNOT" "QNOT" -388.203 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -67920 -1978 0 0 0 0 0 0 0 0
+merge "mux_0/nand_1/A" "mux_0/inverter_0/OUT" -58.9659 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -6400 -480 0 0 0 0 0 0 0 0 0 0
+merge "mux_0/inverter_0/OUT" "m1_2250_840#"
+merge "dff_0/Q" "m1_5040_840#" -149.88 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -27920 -1018 0 0 0 0 0 0 0 0 0 0
+merge "m1_5040_840#" "Q"
+merge "mux_0/m1_620_660#" "mux_0/inverter_0/IN" -203.972 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -50320 -1738 0 0 0 0 0 0 0 0 0 0
+merge "mux_0/inverter_0/IN" "mux_0/S"
+merge "mux_0/S" "S"
+merge "dff_0/D" "mux_0/D" -265.969 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -11920 -618 0 0 0 0 0 0 0 0 0 0
+merge "mux_0/D" "D"
+merge "dff_0/CLK" "CLK" -85.2964 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -6400 -320 0 0 0 0 0 0 0 0 0 0
+merge "mux_0/A" "A" -42.9336 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -6400 -320 0 0 0 0 0 0 0 0 0 0
+merge "mux_0/B" "B" -37.8299 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -6400 -320 0 0 0 0 0 0 0 0 0 0

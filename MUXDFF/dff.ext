@@ -1,0 +1,165 @@
+timestamp 1745049344
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use nand nand_3 1 0 1400 0 1 -50
+use nand nand_2 1 0 920 0 1 -50
+use nand nand_1 1 0 440 0 1 -50
+use nand nand_0 1 0 -40 0 1 -50
+use inverter inverter_0 1 0 -410 0 1 -50
+port "Vgnd" 4 -250 -440 1670 -380 m1
+port "D" 5 -420 70 50 150 m2
+port "Q" 6 1130 70 1400 150 m1
+port "QNOT" 2 1000 310 1670 390 m2
+port "CLK" 1 -120 220 -40 300 m1
+port "Vpwr" 3 -250 950 1670 1010 m1
+node "Vgnd" 4 712.494 -250 -440 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 115200 3960 0 0 0 0 0 0 0 0 0 0
+node "m1_650_70#" 2 340.998 650 70 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10000 560 88800 2380 0 0 0 0 0 0 0 0
+node "m1_n330_n40#" 2 317.532 -330 -40 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 90900 2460 0 0 0 0 0 0 0 0 0 0
+node "D" 2 314.545 -420 70 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12800 640 48800 1380 0 0 0 0 0 0 0 0
+node "Q" 1 142.932 1130 70 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 33600 1000 0 0 0 0 0 0 0 0 0 0
+node "QNOT" 2 368.319 1000 310 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 14800 680 80800 2300 0 0 0 0 0 0 0 0
+node "m1_150_70#" 2 380.079 150 70 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10000 560 88000 2360 0 0 0 0 0 0 0 0
+node "CLK" 1 297.967 -120 220 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 75200 2040 0 0 0 0 0 0 0 0 0 0
+node "Vpwr" 4 756.82 -250 950 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 115200 3960 0 0 0 0 0 0 0 0 0 0
+node "w_1670_310#" 32300 40.8 1670 310 nw 0 0 0 0 13600 1400 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "Vpwr" "Q" 14.8639
+cap "m1_150_70#" "D" 88.4444
+cap "m1_n330_n40#" "Vpwr" 13.7662
+cap "Vgnd" "Q" 23.76
+cap "QNOT" "Q" 90.314
+cap "Vpwr" "Vgnd" 14.6667
+cap "CLK" "D" 28.9409
+cap "Vpwr" "QNOT" 11.4438
+cap "m1_n330_n40#" "Vgnd" 95.8974
+cap "m1_650_70#" "Q" 102.965
+cap "Vgnd" "QNOT" 12.9259
+cap "m1_150_70#" "Q" 5.8796
+cap "Vpwr" "m1_650_70#" 7.71286
+cap "Vpwr" "m1_150_70#" 7.09071
+cap "Vpwr" "w_1670_310#" 0.266091
+cap "m1_n330_n40#" "m1_650_70#" 72.0563
+cap "CLK" "Q" 0.946237
+cap "m1_n330_n40#" "m1_150_70#" 76.5074
+cap "CLK" "Vpwr" 48.3137
+cap "m1_650_70#" "Vgnd" 23.6877
+cap "m1_650_70#" "QNOT" 198.171
+cap "Vgnd" "m1_150_70#" 5.46857
+cap "m1_150_70#" "QNOT" 65.0145
+cap "QNOT" "w_1670_310#" 0.336395
+cap "CLK" "m1_n330_n40#" 55.7516
+cap "CLK" "QNOT" 0.963307
+cap "m1_650_70#" "m1_150_70#" 62.7513
+cap "Vpwr" "D" 0.678254
+cap "m1_n330_n40#" "D" 216.063
+cap "CLK" "m1_150_70#" 171.965
+cap "CLK" "w_1670_310#" 0.10683
+cap "Vgnd" "D" 1.50545
+cap "nand_0/a_30_n300#" "nand_1/A" 0.0920454
+cap "nand_3/A" "nand_3/B" 5.47996
+cap "nand_0/a_30_n300#" "nand_3/B" 0.100508
+cap "nand_3/OUT" "nand_1/A" 0.694467
+cap "nand_3/OUT" "nand_3/B" 4.02056
+cap "nand_1/B" "nand_1/a_30_n300#" 41.1286
+cap "nand_3/A" "nand_1/B" 0.769878
+cap "nand_2/A" "nand_3/Vgnd" 106.595
+cap "nand_3/Vpwr" "nand_3/Vgnd" -28.61
+cap "nand_2/A" "nand_3/Vpwr" 78.9196
+cap "nand_0/a_30_n300#" "nand_1/B" 49.4408
+cap "nand_3/OUT" "nand_1/B" 0.593884
+cap "nand_0/B" "nand_3/Vgnd" 23.2606
+cap "nand_0/B" "nand_2/A" -20.7753
+cap "nand_0/B" "nand_3/Vpwr" 30.9994
+cap "nand_1/A" "nand_3/Vgnd" -23.7076
+cap "nand_2/A" "nand_1/A" 120.156
+cap "nand_1/A" "nand_3/Vpwr" 264.687
+cap "nand_3/B" "nand_3/Vgnd" 107.566
+cap "nand_3/B" "nand_2/A" 63.0137
+cap "nand_3/B" "nand_3/Vpwr" 1.62729
+cap "nand_1/a_30_n300#" "nand_3/Vgnd" -0.585537
+cap "nand_1/B" "nand_3/Vgnd" 264.076
+cap "nand_2/A" "nand_1/B" 100.776
+cap "nand_1/B" "nand_3/Vpwr" 159.377
+cap "nand_1/a_30_n300#" "nand_3/Vpwr" -0.376854
+cap "nand_2/A" "nand_1/a_30_n300#" 4.58149
+cap "nand_1/B" "nand_3/a_30_n300#" 0.280494
+cap "nand_0/a_30_n300#" "nand_3/Vgnd" -0.585537
+cap "nand_0/a_30_n300#" "nand_3/Vpwr" -0.399347
+cap "nand_0/B" "nand_1/A" 63.5968
+cap "nand_0/B" "nand_3/B" 0.451922
+cap "nand_3/B" "nand_1/A" 21.9522
+cap "nand_3/B" "nand_2/a_30_n300#" 0.40078
+cap "nand_0/B" "nand_1/B" 18.7744
+cap "nand_0/a_30_n300#" "nand_0/B" 0.79539
+cap "nand_1/B" "nand_1/A" 49.9692
+cap "nand_1/B" "nand_2/a_30_n300#" 1.12205
+cap "nand_3/B" "nand_1/B" -14.3764
+cap "nand_3/A" "nand_1/A" 0.727604
+cap "nand_3/B" "nand_1/a_30_n300#" 0.118506
+cap "nand_3/Vpwr" "nand_3/B" -2.64216
+cap "nand_3/OUT" "nand_1/A" 0.469251
+cap "nand_3/B" "nand_3/a_30_n300#" 19.5717
+cap "nand_3/Vgnd" "nand_2/A" -3.43572
+cap "nand_1/B" "nand_2/A" 9.61739
+cap "nand_1/B" "nand_3/OUT" 0.624325
+cap "nand_3/Vgnd" "nand_2/a_30_n300#" 0.603853
+cap "nand_3/Vgnd" "nand_3/OUT" -10.7451
+cap "nand_3/A" "nand_2/A" 8.05908
+cap "nand_3/Vpwr" "nand_2/A" 28.1836
+cap "nand_3/B" "nand_2/A" 26.0689
+cap "nand_3/OUT" "nand_0/B" 0.10016
+cap "nand_3/A" "nand_3/OUT" 52.1948
+cap "nand_3/Vpwr" "nand_3/OUT" 86.6346
+cap "nand_3/B" "nand_2/a_30_n300#" 19.518
+cap "nand_3/OUT" "nand_3/a_30_n300#" 0.132706
+cap "nand_3/B" "nand_3/OUT" 5.15782
+cap "nand_3/A" "nand_1/A" -0.455283
+cap "nand_3/A" "nand_3/Vgnd" 131.694
+cap "nand_3/A" "nand_1/B" 0.237154
+cap "nand_3/Vpwr" "nand_3/Vgnd" -19.4072
+cap "nand_3/Vgnd" "nand_3/B" 54.3504
+cap "nand_3/OUT" "nand_2/A" 8.32555
+cap "nand_3/A" "nand_0/B" 0.00652506
+cap "nand_3/Vpwr" "nand_3/A" 7.0567
+cap "nand_1/A" "nand_2/A" 1.90343
+cap "nand_3/A" "nand_3/a_30_n300#" 0.40078
+cap "nand_3/A" "nand_3/B" 62.1613
+cap "nand_2/A" "nand_1/B" 0.5
+cap "nand_3/Vpwr" "nand_1/B" 1.71032
+cap "nand_1/A" "nand_3/Vpwr" 1.4865
+cap "nand_0/B" "nand_1/A" 1.94118
+cap "nand_0/B" "nand_3/Vpwr" 3.49102
+cap "nand_1/B" "nand_2/A" 0.5
+cap "nand_3/Vpwr" "nand_2/A" 0.704118
+cap "nand_3/Vpwr" "nand_3/OUT" 1.71032
+cap "nand_3/Vpwr" "nand_3/A" 0.704118
+cap "nand_3/A" "nand_3/OUT" 1
+merge "inverter_0/Vgnd" "nand_0/Vgnd" -1182.99 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -118800 -4560 0 0 0 0 0 0 0 0 0 0
+merge "nand_0/Vgnd" "nand_1/Vgnd"
+merge "nand_1/Vgnd" "nand_2/Vgnd"
+merge "nand_2/Vgnd" "nand_3/Vgnd"
+merge "nand_3/Vgnd" "VSUBS"
+merge "VSUBS" "Vgnd"
+merge "nand_2/B" "nand_3/OUT" -241.07 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -10000 -560 0 0 0 0 0 0 0 0 0 0
+merge "nand_3/OUT" "QNOT"
+merge "nand_0/OUT" "nand_2/A" -367.894 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -8400 -520 0 0 0 0 0 0 0 0 0 0
+merge "nand_2/A" "m1_150_70#"
+merge "inverter_0/Vpwr" "nand_0/Vpwr" -1858.46 0 0 0 0 -54400 -6960 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -118800 -4560 0 0 0 0 0 0 0 0 0 0
+merge "nand_0/Vpwr" "nand_1/Vpwr"
+merge "nand_1/Vpwr" "nand_2/Vpwr"
+merge "nand_2/Vpwr" "nand_3/Vpwr"
+merge "nand_3/Vpwr" "Vpwr"
+merge "Vpwr" "w_1670_310#"
+merge "nand_0/A" "nand_1/A" -346.476 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -12800 -640 0 0 0 0 0 0 0 0 0 0
+merge "nand_1/A" "CLK"
+merge "inverter_0/IN" "nand_0/B" -226.488 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -12800 -640 0 0 0 0 0 0 0 0 0 0
+merge "nand_0/B" "D"
+merge "nand_2/OUT" "nand_3/A" -279.441 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -12000 -620 0 0 0 0 0 0 0 0 0 0
+merge "nand_3/A" "Q"
+merge "nand_1/OUT" "nand_3/B" -300.148 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -9200 -540 0 0 0 0 0 0 0 0 0 0
+merge "nand_3/B" "m1_650_70#"
+merge "inverter_0/OUT" "nand_1/B" -483.709 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -12000 -620 0 0 0 0 0 0 0 0 0 0
+merge "nand_1/B" "m1_n330_n40#"

@@ -1,0 +1,267 @@
+* NGSPICE file created from muxdd.ext - technology: sky130A
+
+.subckt nand A OUT Vpwr Vgnd B a_30_n300#
+X0 OUT A Vpwr Vpwr sky130_fd_pr__pfet_01v8 ad=0.75 pd=3.5 as=1.35 ps=6.9 w=3 l=0.15
+X1 OUT B a_30_n300# Vgnd sky130_fd_pr__nfet_01v8 ad=0.9 pd=4.9 as=0.5 ps=2.5 w=2 l=0.15
+X2 Vpwr B OUT Vpwr sky130_fd_pr__pfet_01v8 ad=1.35 pd=6.9 as=0.75 ps=3.5 w=3 l=0.15
+X3 a_30_n300# A Vgnd Vgnd sky130_fd_pr__nfet_01v8 ad=0.5 pd=2.5 as=0.9 ps=4.9 w=2 l=0.15
+C0 B a_30_n300# 0.04439f
+C1 A a_30_n300# 0.01564f
+C2 OUT Vpwr 0.43876f
+C3 B Vpwr 0.0698f
+C4 Vpwr A 0.12666f
+C5 Vpwr a_30_n300# 0
+C6 OUT B 0.16394f
+C7 OUT A 0.06397f
+C8 B A 0.07503f
+C9 OUT a_30_n300# 0.12366f
+C10 OUT Vgnd 0.27899f
+C11 B Vgnd 0.28514f
+C12 A Vgnd 0.33935f
+C13 Vpwr Vgnd 1.3446f
+C14 a_30_n300# Vgnd 0.15655f
+.ends
+
+.subckt inverter IN OUT Vpwr Vgnd
+X0 OUT IN Vpwr Vpwr sky130_fd_pr__pfet_01v8 ad=1.35 pd=6.9 as=1.35 ps=6.9 w=3 l=0.15
+X1 OUT IN Vgnd Vgnd sky130_fd_pr__nfet_01v8 ad=0.9 pd=4.9 as=0.9 ps=4.9 w=2 l=0.15
+C0 IN OUT 0.10512f
+C1 OUT Vpwr 0.2341f
+C2 IN Vpwr 0.0917f
+C3 OUT Vgnd 0.49941f
+C4 IN Vgnd 0.42665f
+C5 Vpwr Vgnd 0.96908f
+.ends
+
+.subckt dff CLK QNOT Vpwr D Q nand_0/a_30_n300# nand_1/a_30_n300# nand_1/B nand_3/B
++ nand_2/A Vgnd
+Xnand_3 Q QNOT Vpwr Vgnd nand_3/B nand_3/a_30_n300# nand
+Xinverter_0 D nand_1/B Vpwr Vgnd inverter
+Xnand_0 CLK nand_2/A Vpwr Vgnd D nand_0/a_30_n300# nand
+Xnand_1 CLK nand_3/B Vpwr Vgnd nand_1/B nand_1/a_30_n300# nand
+Xnand_2 nand_2/A Q Vpwr Vgnd QNOT nand_2/a_30_n300# nand
+C0 nand_2/A QNOT 0.07334f
+C1 Vpwr CLK 0.31459f
+C2 nand_3/B nand_3/a_30_n300# 0.01957f
+C3 nand_1/B QNOT 0.00122f
+C4 Q nand_3/a_30_n300# 0
+C5 Vpwr nand_1/a_30_n300# -0
+C6 nand_2/A nand_3/B 0.15183f
+C7 nand_3/B nand_2/a_30_n300# 0.01992f
+C8 QNOT CLK 0.00213f
+C9 nand_2/A Q 0.01394f
+C10 nand_1/B nand_3/B 0.05768f
+C11 Vpwr D 0.03517f
+C12 nand_1/B Q 0.00101f
+C13 nand_3/B CLK 0.02195f
+C14 Vpwr nand_0/a_30_n300# -0
+C15 CLK Q 0.00122f
+C16 D QNOT 0
+C17 nand_1/a_30_n300# nand_3/B 0
+C18 D nand_3/B 0
+C19 D Q 0
+C20 nand_0/a_30_n300# nand_3/B 0
+C21 nand_1/B nand_3/a_30_n300# 0
+C22 nand_1/B nand_2/A 0.1879f
+C23 nand_1/B nand_2/a_30_n300# 0.00112f
+C24 Vpwr QNOT 0.10013f
+C25 nand_2/A CLK 0.29402f
+C26 Vpwr nand_3/B 0.0067f
+C27 nand_1/B CLK 0.10572f
+C28 nand_1/a_30_n300# nand_2/A 0.00458f
+C29 Vpwr Q 0.02262f
+C30 nand_1/a_30_n300# nand_1/B 0.04113f
+C31 nand_2/A D 0.06767f
+C32 QNOT nand_3/B 0.20735f
+C33 QNOT Q 0.14351f
+C34 nand_1/B D 0.23484f
+C35 nand_0/a_30_n300# nand_1/B 0.04944f
+C36 D CLK 0.09448f
+C37 nand_3/B Q 0.17061f
+C38 nand_0/a_30_n300# CLK 0
+C39 Vpwr nand_2/A 0.1149f
+C40 QNOT nand_3/a_30_n300# 0
+C41 Vpwr nand_1/B 0.17485f
+C42 nand_0/a_30_n300# D 0
+C43 Vpwr Vgnd 5.25329f
+C44 nand_2/A Vgnd 0.73916f
+C45 nand_2/a_30_n300# Vgnd 0.15716f
+C46 nand_1/B Vgnd 0.97835f
+C47 CLK Vgnd 0.60649f
+C48 nand_1/a_30_n300# Vgnd 0.15597f
+C49 D Vgnd 0.82462f
+C50 nand_0/a_30_n300# Vgnd 0.15597f
+C51 QNOT Vgnd 0.69356f
+C52 nand_3/B Vgnd 0.79058f
+C53 Q Vgnd 0.63729f
+C54 nand_3/a_30_n300# Vgnd 0.15655f
+.ends
+
+.subckt mux S A B Vpwr D nand_0/a_30_n300# inverter_0/OUT nand_1/a_30_n300# nand_1/A
++ nand_2/a_30_n300# inverter_0/IN nand_2/B nand_2/A m1_620_660# Vgnd
+Xinverter_0 inverter_0/IN inverter_0/OUT Vpwr Vgnd inverter
+Xnand_0 S nand_2/B Vpwr Vgnd B nand_0/a_30_n300# nand
+Xnand_1 nand_1/A nand_2/A Vpwr Vgnd A nand_1/a_30_n300# nand
+Xnand_2 nand_2/A D Vpwr Vgnd nand_2/B nand_2/a_30_n300# nand
+C0 Vpwr inverter_0/IN -0.0016f
+C1 inverter_0/IN inverter_0/OUT -0
+C2 inverter_0/IN nand_1/A 0.0221f
+C3 S nand_2/B 0.1107f
+C4 nand_1/a_30_n300# nand_2/B 0.0204f
+C5 nand_0/a_30_n300# Vpwr -0
+C6 nand_2/A B 0
+C7 B m1_620_660# 0
+C8 nand_2/A Vpwr 0.02146f
+C9 nand_2/B inverter_0/IN 0.06683f
+C10 nand_2/A inverter_0/OUT 0.01198f
+C11 B Vpwr 0
+C12 nand_2/A nand_2/a_30_n300# 0
+C13 Vpwr m1_620_660# 0.01858f
+C14 B inverter_0/OUT 0
+C15 inverter_0/OUT m1_620_660# 0.0057f
+C16 Vpwr inverter_0/OUT 0.1734f
+C17 nand_2/A nand_1/A 0.00858f
+C18 nand_2/A D 0.01163f
+C19 S inverter_0/IN 0.00207f
+C20 nand_0/a_30_n300# nand_2/B 0.00752f
+C21 nand_1/A m1_620_660# 0.01853f
+C22 nand_2/A A 0.0227f
+C23 Vpwr nand_1/A 0.03424f
+C24 Vpwr D 0.00145f
+C25 inverter_0/OUT nand_1/A 0.03253f
+C26 nand_2/A nand_2/B 0.15916f
+C27 nand_0/a_30_n300# S 0.00357f
+C28 B nand_2/B -0.00522f
+C29 nand_2/B m1_620_660# 0.00296f
+C30 A Vpwr 0.00496f
+C31 A inverter_0/OUT 0.01741f
+C32 Vpwr nand_2/B 0.05421f
+C33 nand_2/B inverter_0/OUT 0.06678f
+C34 S nand_2/A 0
+C35 nand_2/a_30_n300# nand_2/B 0.03604f
+C36 S B 0.04027f
+C37 S m1_620_660# 0.05867f
+C38 A nand_1/A 0
+C39 A D 0
+C40 nand_2/B nand_1/A 0.01903f
+C41 S Vpwr 0.06743f
+C42 nand_2/B D 0.02884f
+C43 S inverter_0/OUT 0.00209f
+C44 nand_1/a_30_n300# inverter_0/OUT 0
+C45 nand_2/A inverter_0/IN 0
+C46 B inverter_0/IN 0.01933f
+C47 inverter_0/IN m1_620_660# 0.03246f
+C48 A nand_2/B 0.0288f
+C49 m1_620_660# Vgnd 0.0258f
+C50 D Vgnd 0.26427f
+C51 nand_2/B Vgnd 1.00709f
+C52 nand_2/A Vgnd 0.64367f
+C53 Vpwr Vgnd 4.15801f
+C54 nand_2/a_30_n300# Vgnd 0.15603f
+C55 A Vgnd 0.24518f
+C56 nand_1/A Vgnd 0.3162f
+C57 nand_1/a_30_n300# Vgnd 0.15716f
+C58 B Vgnd 0.26273f
+C59 S Vgnd 0.37903f
+C60 nand_0/a_30_n300# Vgnd 0.15716f
+C61 inverter_0/OUT Vgnd 0.6062f
+C62 inverter_0/IN Vgnd 0.42759f
+.ends
+
+.subckt muxdd Vpwr Vgnd S B A D QNOT Q CLK
+Xdff_0 CLK QNOT Vpwr D Q dff_0/nand_0/a_30_n300# dff_0/nand_1/a_30_n300# dff_0/nand_1/B
++ dff_0/nand_3/B dff_0/nand_2/A Vgnd dff
+Xmux_0 S A B Vpwr D mux_0/nand_0/a_30_n300# mux_0/nand_1/A mux_0/nand_1/a_30_n300#
++ mux_0/nand_1/A mux_0/nand_2/a_30_n300# S mux_0/nand_2/B mux_0/nand_2/A S Vgnd mux
+C0 A mux_0/nand_1/A 0
+C1 mux_0/nand_2/A dff_0/nand_3/B 0
+C2 mux_0/nand_2/A A 0.00221f
+C3 CLK Q 0
+C4 D S 0
+C5 dff_0/nand_0/a_30_n300# mux_0/nand_2/B 0
+C6 S mux_0/nand_1/A 0.03469f
+C7 CLK Vpwr 0.02638f
+C8 A mux_0/nand_1/a_30_n300# 0.0022f
+C9 Q Vpwr 0.00138f
+C10 mux_0/nand_2/A S -0
+C11 CLK mux_0/nand_2/B 0
+C12 B mux_0/nand_2/B 0
+C13 dff_0/nand_2/A CLK 0.00117f
+C14 D mux_0/nand_1/A 0
+C15 dff_0/nand_2/A Q 0
+C16 D mux_0/nand_2/A 0.00374f
+C17 mux_0/nand_2/B Vpwr 0.00517f
+C18 mux_0/nand_2/A mux_0/nand_1/A 0.00499f
+C19 dff_0/nand_3/B dff_0/nand_1/B -0
+C20 A dff_0/nand_1/B 0
+C21 dff_0/nand_2/A Vpwr 0.00187f
+C22 mux_0/nand_0/a_30_n300# B 0.0022f
+C23 QNOT dff_0/nand_3/B 0.00483f
+C24 dff_0/nand_2/A mux_0/nand_2/B 0
+C25 mux_0/nand_1/a_30_n300# mux_0/nand_1/A -0
+C26 dff_0/nand_0/a_30_n300# dff_0/nand_3/B -0
+C27 S dff_0/nand_1/B 0
+C28 CLK A 0
+C29 Q dff_0/nand_3/B 0
+C30 D dff_0/nand_1/B 0.01856f
+C31 dff_0/nand_1/B mux_0/nand_1/A 0
+C32 dff_0/nand_3/B Vpwr 0
+C33 A Vpwr 0
+C34 mux_0/nand_2/A dff_0/nand_1/B 0
+C35 mux_0/nand_2/B dff_0/nand_3/B 0.00285f
+C36 CLK S 0
+C37 mux_0/nand_2/B A 0.00245f
+C38 B S 0.00507f
+C39 dff_0/nand_2/A A 0
+C40 mux_0/nand_1/a_30_n300# dff_0/nand_1/B 0
+C41 D CLK 0.01278f
+C42 S Vpwr 0.00534f
+C43 D B 0
+C44 CLK mux_0/nand_1/A 0
+C45 S mux_0/nand_2/B 0.00704f
+C46 mux_0/nand_2/A CLK 0.00541f
+C47 B mux_0/nand_2/A -0
+C48 D Vpwr 0.02474f
+C49 mux_0/nand_1/A Vpwr 0.00119f
+C50 D mux_0/nand_2/B 0.02206f
+C51 mux_0/nand_2/B mux_0/nand_1/A 0.00292f
+C52 mux_0/nand_2/A Vpwr -0
+C53 mux_0/nand_0/a_30_n300# S -0
+C54 dff_0/nand_2/A D 0
+C55 mux_0/nand_2/A mux_0/nand_2/B -0
+C56 dff_0/nand_2/A mux_0/nand_1/A 0
+C57 dff_0/nand_2/A mux_0/nand_2/A 0
+C58 mux_0/nand_2/a_30_n300# dff_0/nand_1/B 0
+C59 mux_0/nand_1/a_30_n300# Vpwr -0
+C60 CLK dff_0/nand_1/B 0.01917f
+C61 dff_0/nand_1/a_30_n300# mux_0/nand_2/B 0
+C62 CLK QNOT 0
+C63 Q QNOT 0.00402f
+C64 dff_0/nand_1/B Vpwr -0.00578f
+C65 D dff_0/nand_3/B 0
+C66 D A 0
+C67 mux_0/nand_2/B dff_0/nand_1/B 0.01265f
+C68 QNOT Vpwr 0.00147f
+C69 mux_0/nand_2/B Vgnd 0.77533f
+C70 mux_0/nand_2/A Vgnd 0.48832f
+C71 mux_0/nand_2/a_30_n300# Vgnd 0.1571f
+C72 A Vgnd 0.24581f
+C73 mux_0/nand_1/A Vgnd 0.80843f
+C74 mux_0/nand_1/a_30_n300# Vgnd 0.15655f
+C75 B Vgnd 0.26349f
+C76 S Vgnd 0.82289f
+C77 mux_0/nand_0/a_30_n300# Vgnd 0.15655f
+C78 Vpwr Vgnd 9.2284f
+C79 dff_0/nand_2/A Vgnd 0.63053f
+C80 dff_0/nand_2/a_30_n300# Vgnd 0.15655f
+C81 dff_0/nand_1/B Vgnd 0.61848f
+C82 CLK Vgnd 0.62311f
+C83 dff_0/nand_1/a_30_n300# Vgnd 0.15655f
+C84 D Vgnd 1.03598f
+C85 dff_0/nand_0/a_30_n300# Vgnd 0.15655f
+C86 QNOT Vgnd 0.69525f
+C87 dff_0/nand_3/B Vgnd 0.60498f
+C88 Q Vgnd 0.48228f
+C89 dff_0/nand_3/a_30_n300# Vgnd 0.15655f
+.ends
+

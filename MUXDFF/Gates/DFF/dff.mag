@@ -1,0 +1,108 @@
+magic
+tech sky130A
+timestamp 1745049344
+<< nwell >>
+rect 835 155 845 495
+<< metal1 >>
+rect -125 475 835 505
+rect -60 205 220 245
+rect -60 110 -20 205
+rect 180 110 220 205
+rect 500 75 505 105
+rect 535 75 540 105
+rect 660 75 700 150
+rect -245 70 -205 75
+rect -245 40 -240 70
+rect -210 40 -205 70
+rect -245 35 -205 40
+rect -165 20 -130 75
+rect 20 70 60 75
+rect 20 40 25 70
+rect 55 40 60 70
+rect 20 35 60 40
+rect 75 70 115 75
+rect 75 40 80 70
+rect 110 40 115 70
+rect 75 35 115 40
+rect 260 20 300 75
+rect 325 70 365 75
+rect 325 40 330 70
+rect 360 40 365 70
+rect 325 35 365 40
+rect 500 35 540 75
+rect 565 35 700 75
+rect -165 -20 300 20
+rect -125 -220 835 -190
+<< via1 >>
+rect 425 115 455 145
+rect 505 75 535 105
+rect -240 40 -210 70
+rect 25 40 55 70
+rect 80 40 110 70
+rect 330 40 360 70
+rect 745 40 775 70
+rect 805 40 835 70
+<< metal2 >>
+rect 75 155 460 195
+rect -245 70 60 75
+rect -245 40 -240 70
+rect -210 40 25 70
+rect 55 40 60 70
+rect -245 35 60 40
+rect 75 70 115 155
+rect 420 145 460 155
+rect 420 115 425 145
+rect 455 115 460 145
+rect 420 110 460 115
+rect 500 155 835 195
+rect 500 105 540 155
+rect 500 75 505 105
+rect 535 75 540 105
+rect 75 40 80 70
+rect 110 40 115 70
+rect 75 35 115 40
+rect 325 70 365 75
+rect 325 40 330 70
+rect 360 40 365 70
+rect 325 25 365 40
+rect 740 70 780 75
+rect 740 40 745 70
+rect 775 40 780 70
+rect 740 25 780 40
+rect 805 70 835 155
+rect 805 35 835 40
+rect 325 -15 780 25
+use inverter  inverter_0
+timestamp 1744986694
+transform 1 0 -205 0 1 -25
+box -105 -195 80 530
+use nand  nand_0
+timestamp 1744987844
+transform 1 0 -20 0 1 -25
+box -105 -195 145 530
+use nand  nand_1
+timestamp 1744987844
+transform 1 0 220 0 1 -25
+box -105 -195 145 530
+use nand  nand_2
+timestamp 1744987844
+transform 1 0 460 0 1 -25
+box -105 -195 145 530
+use nand  nand_3
+timestamp 1744987844
+transform 1 0 700 0 1 -25
+box -105 -195 145 530
+<< labels >>
+flabel metal1 -60 110 -20 150 1 FreeSans 200 0 0 0 CLK
+port 1 n
+flabel metal1 -125 -220 835 -190 1 FreeSans 200 0 0 0 Vgnd
+port 4 n
+flabel metal1 -125 475 835 505 1 FreeSans 200 0 0 0 Vpwr
+port 3 n
+flabel metal2 -210 35 25 75 1 FreeSans 200 0 0 0 D
+port 5 n
+flabel metal2 500 155 835 195 1 FreeSans 200 0 0 0 QNOT
+port 2 n
+flabel metal1 565 35 700 75 1 FreeSans 200 0 0 0 Q
+port 6 n
+<< end >>
