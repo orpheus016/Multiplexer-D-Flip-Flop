@@ -7,7 +7,12 @@ MUX DFF Layout in magic and gds plus testbench
 
 ## Testbench + Parasitic Analysis
 
+Testbench
+
 ![image](https://github.com/user-attachments/assets/d4733ebc-5b52-4689-8a7c-a5e84757909d)
+
+Parasitic
+
 ![image](https://github.com/user-attachments/assets/c4015944-0ece-4157-8e1a-e596ff1bc506)
 
 ## Timing Analysis
